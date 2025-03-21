@@ -3,7 +3,18 @@
   "version": "1.0.0",
   "private": true,
   "packageManager": "pnpm@9.5.0",
+  "workspaces": [
+    "configs/*",
+    "packages/*"
+  ],
   "scripts": {
+    "lint": "biome check --config-path ./biome.json .",
+    "lint:fix": "biome check --config-path ./biome.json --write --unsafe .",
     "preinstall": "npx only-allow pnpm"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.9.4",
+    "tsx": "^4.15.6",
+    "typescript": "^5.6.2"
   }
 }
