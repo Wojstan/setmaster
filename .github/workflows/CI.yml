@@ -7,20 +7,15 @@ on:
       - main
 
 jobs:
-  build:
-    strategy:
-      matrix:
-        node: [ "20" ]
-        os: [ ubuntu-latest ]
-    runs-on: ${{ matrix.os }}
-
+  check:
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
         with:
-          node-version: ${{ matrix.node }}
-          cache: "pnpm"
+          clean: false
 
-      - run: pnpm install
+      - name: Install Node and dependencies
+        uses: ./.github/actions/install-dependencies
 
-      - run: pnpm biome:check
+      - name: Check biome
+        run: pnpm run biome:check

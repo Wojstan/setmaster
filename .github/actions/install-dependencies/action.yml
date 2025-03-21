@@ -1,0 +1,22 @@
+name: Install Node and package dependencies
+description: "Install Node dependencies with pnpm"
+
+runs:
+  using: "composite"
+  steps:
+    - name: Install PNPM (as defined in package.json)
+      uses: pnpm/action-setup@v4
+
+    - name: Use Node.js 20
+      uses: actions/setup-node@v4
+      with:
+        node-version: 20
+        cache: "pnpm"
+
+    - name: Install packages
+      shell: bash
+      run: pnpm install --frozen-lockfile
+
+    - name: Install Vercel CLI
+      shell: bash
+      run: pnpm install --global vercel
