@@ -1,0 +1,9 @@
+{
+  "name": "setmaster",
+  "version": "1.0.0",
+  "private": true,
+  "packageManager": "pnpm@9.5.0",
+  "scripts": {
+    "preinstall": "npx only-allow pnpm"
+  }
+}
