@@ -20,18 +20,19 @@ interface TrackInfo extends Partial<APITrackInfo> {
   artist: string
 }
 
-export class SoundCloudAPI {
+export class SoundCloudService {
   private readonly API_URL = 'https://api-v2.soundcloud.com'
   private readonly WEB_URL = 'https://soundcloud.com'
   private CLIENT_ID
 
-  async getClientId(): Promise<string> {
+  getClientId(): Promise<string> {
     if (this.CLIENT_ID) return this.CLIENT_ID
 
     return this.scrapClientId()
   }
 
   async getTrackInfo(trackUrl: string): Promise<TrackInfo> {
+    await this.getClientId()
     const trackId = await this.fetchTrackID(trackUrl)
     const apiTrackInfo = await this.fetchTrackInfo(trackId)
     const trackInfo = this.parseTrackInfo(apiTrackInfo)

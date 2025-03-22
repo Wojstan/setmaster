@@ -1,10 +1,10 @@
 import { describe, expect, it } from 'vitest'
-import { SoundCloudAPI } from '../SoundCloudAPI'
+import { SoundCloudService } from '../SoundCloudService'
 
-describe('SoundCloudAPI', () => {
+describe('SoundCloudService', () => {
   const trackUrl =
     'https://soundcloud.com/luna-city-express/luna-city-express-bucht-der-traumer-schlupfloch-16aug2024'
-  const soundCloudIntegrator = new SoundCloudAPI()
+  const soundCloudIntegrator = new SoundCloudService()
 
   it('gets clientId', async () => {
     const clientId = await soundCloudIntegrator.getClientId()
