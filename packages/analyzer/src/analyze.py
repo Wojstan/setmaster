@@ -1,3 +1,4 @@
-import pydub # type: ignore
-
-print("Python with pydub installed")
+print({
+    'bpm': 120,
+    'key': '8A',
+})

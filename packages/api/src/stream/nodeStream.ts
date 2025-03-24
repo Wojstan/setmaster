@@ -21,7 +21,7 @@ export function readStream(webStream: WebStream): Readable {
 }
 
 export function saveStream(nodeStream: Readable): void {
-  const writeStream = createWriteStream('../setmaster-analyzer/set.mp3')
+  const writeStream = createWriteStream('../analyzer/set.mp3')
 
   nodeStream.pipe(writeStream)
 }
