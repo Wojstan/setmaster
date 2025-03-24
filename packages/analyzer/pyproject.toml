@@ -1,9 +1,9 @@
 [project]
-name = "setmaster-analyzer"
+name = "analyzer"
 version = "1.0.0"
 description = "A package for analyzing sound files using pydub"
 requires-python = ">=3.8"
 dependencies = ["pydub"]
 
 [dependency-groups]
-dev = ["ruff==0.4.5"]
+dev = ["ruff"]

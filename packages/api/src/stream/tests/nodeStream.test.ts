@@ -28,7 +28,7 @@ describe('nodeStream', () => {
     const mockNodeStream = Readable.from(['mock data'])
     saveStream(mockNodeStream)
 
-    expect(fs.createWriteStream).toHaveBeenCalledWith('./set.mp3')
+    expect(fs.createWriteStream).toHaveBeenCalledWith('../analyzer/set.mp3')
   })
 })
 

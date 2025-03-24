@@ -12,7 +12,7 @@ importers:
         specifier: ^1.9.4
         version: 1.9.4
 
-  packages/setmaster-api:
+  packages/api:
     devDependencies:
       '@types/node':
         specifier: ^22.13.11
