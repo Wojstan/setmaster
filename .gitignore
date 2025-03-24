@@ -43,3 +43,12 @@ dist
 
 # generated data
 generated
+
+# venv
+.venv
+
+# ruff
+.ruff_cache
+
+# local testing
+*.mp3
