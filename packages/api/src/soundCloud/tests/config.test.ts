@@ -1,11 +1,11 @@
-import { describe, expect, it } from 'vitest'
 import { getClientId } from '../config'
+import { describe, expect, it } from 'bun:test'
 
 // TODO: Add tests for scrapping the client id
 describe('soundCloud', () => {
   it('gets clientId', async () => {
     const clientId = await getClientId()
 
-    expect(clientId).toEqual('UjhhbCuNo1OQfTwkzajxQNLlJcSlUlVz')
+    expect(clientId).toEqual('qQiu5UJazb1JLxqsBpsp67Yr5yrptKJ0')
   })
 })
