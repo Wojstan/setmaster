@@ -1,5 +1,5 @@
-import { getClientId } from '../config'
 import { describe, expect, it } from 'bun:test'
+import { getClientId } from '../config'
 
 // TODO: Add tests for scrapping the client id
 describe('soundCloud', () => {
