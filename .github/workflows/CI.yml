@@ -14,8 +14,8 @@ jobs:
         with:
           clean: false
 
-      - name: Install Node and dependencies
+      - name: Install Bun and dependencies
         uses: ./.github/actions/install-dependencies
 
       - name: Check biome
-        run: pnpm run biome:check
+        run: bun run biome:check
