@@ -1,22 +1,18 @@
-name: Install Node and package dependencies
-description: "Install Node dependencies with pnpm"
+name: Install Bun and package dependencies
+description: "Install dependencies with Bun"
 
 runs:
   using: "composite"
   steps:
-    - name: Install PNPM (as defined in package.json)
-      uses: pnpm/action-setup@v4
-
-    - name: Use Node.js 20
-      uses: actions/setup-node@v4
+    - name: Install Bun
+      uses: oven-sh/setup-bun@v1
       with:
-        node-version: 20
-        cache: "pnpm"
+        bun-version: latest
 
-    - name: Install packages
+    - name: Install dependencies
       shell: bash
-      run: pnpm install --frozen-lockfile
+      run: bun install --frozen-lockfile
 
     - name: Install Vercel CLI
       shell: bash
-      run: pnpm install --global vercel
+      run: bun add -g vercel

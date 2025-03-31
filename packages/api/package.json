@@ -2,17 +2,15 @@
   "name": "setmaster-api",
   "version": "1.0.0",
   "scripts": {
-    "lint:ts": "pnpm tsc --noEmit",
-    "biome:fix": "cd ../../ && pnpm run biome:fix",
-    "fix": "pnpm biome:fix && pnpm lint:ts",
-    "start": "npx ts-node -r tsconfig-paths/register ./src/app.ts",
-    "test": "vitest --run"
+    "lint:ts": "bun tsc --noEmit",
+    "biome:fix": "cd ../../ && bun run biome:fix",
+    "fix": "bun biome:fix && bun lint:ts",
+    "start": "bun run ./src/app.ts",
+    "test": "bun test"
   },
   "devDependencies": {
-    "@types/node": "^22.13.11",
-    "ts-node": "^10.9.2",
-    "tsconfig-paths": "^4.2.0",
-    "typescript": "^5.8.2",
-    "vitest": "^3.0.9"
-  }
+    "@types/bun": "latest",
+    "bun-types": "^1.2.7"
+  },
+  "private": true
 }

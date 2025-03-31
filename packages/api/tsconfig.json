@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "module": "commonjs",
+    "module": "ESNext",
     "target": "ES2022",
     "outDir": "./out",
     "baseUrl": "./src",
@@ -12,7 +12,9 @@
     "experimentalDecorators": true,
     "inlineSources": true,
     "sourceRoot": "./src",
-    "types": ["vitest/globals"]
+    "moduleResolution": "bundler",
+    "types": ["bun"]
   },
   "include": ["./src/**/*.ts", "./src/*.ts"],
+  "exclude": ["node_modules"]
 }

@@ -3,14 +3,14 @@
   "version": "1.0.0",
   "private": true,
   "license": "MIT",
-  "packageManager": "pnpm@9.5.0",
+  "packageManager": "bun@1.2.7",
   "workspaces": [
     "packages/*"
   ],
   "scripts": {
-    "biome:check": "pnpm biome check .",
-    "biome:fix": "pnpm biome:check --write",
-    "preinstall": "npx only-allow pnpm"
+    "biome:check": "bun biome check .",
+    "biome:fix": "bun biome:check --write",
+    "preinstall": "bun x only-allow bun"
   },
   "devDependencies": {
     "@biomejs/biome": "^1.9.4"
